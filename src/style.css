@@ -1,8 +1,13 @@
 @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Space+Mono&display=swap');
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
-    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
-    margin: 0px;
+    font-family: 'RIDIBatang';margin: 0px;
     padding: 0px;
     
     transition: all .3s ease-in-out;
@@ -12,6 +17,7 @@
 }
 body{
     color: #333;
+    overflow-x: hidden;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -57,7 +63,7 @@ section{
 }
 .header>.wrap>.inner>.header-menu>.header-menu-logoimgBox>
 .header-menu-logoimg{
-    height: 36px;
+    width: 147px;
     filter: brightness(0) invert();
 }
 .header>.wrap>.inner>.header-menu>.header-menu-linkList>
@@ -99,7 +105,7 @@ footer.footer{
     font-weight: 500;
     color: #ccc;
     background-color: white;
-    font-size: 0.875rem;
+    font-size: 14px;
     padding-top: 20px;
   }
   
@@ -111,9 +117,10 @@ footer.footer{
   }
   
   .footer_logo_img {
-    width: 136px;
-    height: 32px;
-    filter: grayscale(1);
+    width: 240px;
+    height: 80px;
+    object-fit: cover;
+    filter: brightness(1) invert();
   }
   
   .footer_top_box1_title {
@@ -202,13 +209,15 @@ video{
 }
 .visual-text-content>.text-boldLine>strong{
     font-weight: 600;
+    height: 80px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     background : var(--back-bg);
     background: var(--back-bg-color);
 }
 .visual-text-content>.text-boldLine>strong>img{
-    height: 52px;
+    width: 240px;
     filter: brightness(0) invert();
 }
 .text-little{
@@ -274,7 +283,7 @@ video{
 }
 .mainpage-item-link{
     display: flex;
-    width: 160px;
+    width: 165px;
     align-items: center;
     padding-bottom: 12px;
     border-bottom: 1px #ccc solid;
@@ -334,6 +343,7 @@ video{
     position: absolute;
     left: 0px;
     bottom: 0px;
+    width: 100%;
     height: 100%;
     display: block;
 }
@@ -439,6 +449,8 @@ video{
     margin-top: 104px;
     margin-bottom: 104px;
     color: #555;
+    position: relative;
+    z-index: 9998;
 }
 .grp-bottomBox-box{
     background: var(--back-bg);
@@ -1055,4 +1067,518 @@ padding-top: 180px;
 
 .openButton-opened{
     transform: translateY(-50%) rotate(180deg) ;
+}
+.goDownButton{
+    color: white;
+    letter-spacing: -0.5px;
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+.down-icon{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    line-height: 64px;
+    border-radius: 100px;
+    margin: auto;
+    margin-bottom: 14px;
+
+}
+
+
+
+    .real-review-item{
+        position: absolute;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: .6s all ease;
+      }
+      .real-review-item.active{
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+.left-slide-menu{
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+    position: absolute;
+    z-index: 9999;
+    top: 71px;
+    right: 0px;
+    transform: translateX(100%);
+}
+.left-slide-logoimg{
+    display: block;
+    width: 150px;
+    height: 40px;
+    object-fit: cover;
+    filter: brightness(0) invert();
+}
+.slide-inner{
+    width: 100%;
+    margin: auto;
+}
+.left-slide-top{
+    display: none;
+    padding: 15px 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 32px;
+    color: white;
+}
+.left-slide-link{
+    display: block;
+    padding: 18px 30px;
+}
+/*반응형*/
+
+
+@media (max-width: 1200px) {
+    .inner{
+        width: 95%;
+        margin: auto;
+    }
+    .mainpage-itemLine{
+        display: block;
+    }
+    .mainpage-item{
+        margin: auto;
+    }
+    .service-item-line{
+        display: block;
+    }
+    .service-item{
+        display: inline-block;
+        margin: 60px;
+    }
+    .main-page-serviceBox{
+        width: 95%;
+        padding: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 964px) {
+    .visual-text-content{
+        font-size: 40px;
+    }
+    .visual-text-content>.text-boldLine>strong>img{
+        height: 60px;
+        object-fit: cover;
+    }
+    .header-menu-logoimgBox{
+        display: none;
+    }
+    .header-menu-linkList{
+        display: none;
+    }
+    .left-slide-top{
+        display: flex;
+    }
+    header{
+        height: 71px!important;
+    }
+}
+
+@media (max-width: 600px) {
+    .visual-whereIsHere-boxc{
+        padding-right: 30px;
+        word-break: keep-all;
+    }
+    header{
+        width: 100% !important;
+    }
+    header > .wrap{
+        display: none;
+    }
+    .inner{
+        width: auto;
+        padding: 0px 30px;
+    }
+    .visual-text-content{
+        font-size: 28px;
+    }
+    .visual-text-content>.text-boldLine>strong>img{
+        display: none;
+    }
+    .visual-text-content>.text-boldLine>strong:before{
+        content: "킹메이커";
+
+    }
+    .visual-text-content>.text-boldLine>strong{
+        background:none;
+        display: inline;
+    }
+    .visual-text-content>.text-boldLine{
+        display: inline;
+        word-break: keep-all;
+    }
+    .left-slide-top{
+        font-size: 24px;
+        
+    }
+    .text-little{
+        font-size: 15px;
+    }
+    .section-title{
+        font-size: 24px;
+        word-break: keep-all;
+    }
+    .section-subtitle{
+        font-size: 18px;
+    }
+    .mainpage-itemImg{
+        width: 100%;
+        height: 280px;
+    }
+    .mainpage-item{
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .mainpage-item-title{
+        font-size: 14px;
+    }
+    .mainpage-item-text{
+        font-size: 12px;
+    }
+    .mainpage-item-link{
+        font-size: 12px;
+    }
+    .listItem{
+        font-size: 16px;
+    }
+    .service-subtitle{
+        font-size: 16px;
+    }
+    .service-title{
+        font-size: 20px;
+    }
+    .fullscreen{
+        width: 100%;
+        height: auto;
+    }
+    .main-page-serviceBox{
+        padding: 80px 0px;
+    }
+    .service-item{
+        margin: 30px 0px;
+    }
+    .grp-topBox-title{
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: -2.0px;
+    }
+    .grp-bottomBox-box > video{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+    }
+    .section{
+        margin-bottom: 80px;
+    }
+    .grp-bottomBox-box{
+        margin-top: 240px;
+    }
+    body > .fullscreen+.section > div > div{
+        width: 100%;
+        padding: 0px;
+    }
+    .grp-bottomBox-box{
+        padding: 30px 30px;
+    }
+    .grp-topBox-text{
+        font-size: 18px;
+    }
+    .grp-bottomBox-item{
+        width: 50%;
+        text-align: center;
+        display: block;
+    }
+    .grp-bottomBox-left{
+        width: 100%;
+    }
+    .grp-bottomBox-item-label{
+        font-size: 14px;
+    }
+    .grp-bottomBox-item-persect{
+        font-size: 25px;
+    }
+    .grp-bottomBox-button{
+        font-size: 14px;
+    }
+    .footer{
+        height: auto !important;
+        padding-bottom: 32px;
+    }
+    .footer_top{
+        display: block;
+    }
+    .footer_body{
+        display: block;
+    }
+    .footer_top_box1{
+        margin-bottom: 18px;
+    }
+    .visual-whereIsHere{
+        font-size: 32px;
+    }
+    .visual-whereIsHereSubtext{
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    .wit-smallTitle{
+        font-size: 16px;
+    }
+    .wit-title-underline{
+        word-break: keep-all;
+    }
+    .wit-title{
+        font-size: 18px;
+    }
+    .wit-text{
+        font-size: 14px;
+    }
+    .wit-text > br{
+        display: none;
+    }
+    #wit-sec{
+        height: 678px !important;
+        background-size: cover;
+        margin-bottom: 80px;
+        padding-bottom: 0px;
+    }
+    #wit-sec .inner{
+        height: 678px !important;
+    }
+    .wit-sec-icon{
+        width: 34px;
+        left: 20px;
+        top: 0px;
+    }
+    .wit-sec-txtBox>img{
+        height: 44px;
+    }
+    .wit-sec-title{
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    .wit-sec-maintext{
+        font-size: 14px;
+        word-break: keep-all;
+    }
+    .wit-sec-maintext>br{
+        display: none;
+    }
+    .wit-sec-txtBox{
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .wit-pdfBox{
+        padding: 40px;
+        display: block;
+    }
+    .wit-pdf-left-title{
+        font-size: 18px;
+    }
+    .wit-pdf-left-subtitle{
+        font-size: 14px;
+    }
+    .wit-pdf-right{
+        margin-top: 24px;
+        font-size: 13px;
+    }
+    .wit-pdf-right-button{
+        font-size: 13px;
+    }
+    .footer_logo_img{
+        width: 160px;
+        height: 80px;
+    }
+    #serv-sec{
+        padding-top: 60px;
+    }
+    .serv-section-title{
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+    .serv-thi-title{
+        font-size: 22px;
+        
+        word-break: keep-all;
+    }
+    #serv-thi{
+        min-height: 1088px;
+    }
+    .serv-thi-textBox{
+        width: calc(100% - 40px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #serv-thi>div{
+        width: calc(100% - 40px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .listNum{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin-bottom: 20px;
+    }
+    .serv-thi-textBox-title{
+        font-size: 16px;
+        word-break: keep-all;
+    }
+    .serv-thi-textBox-text{
+        font-size: 15px;
+    }
+    .serv-thi-title{
+        margin-bottom: 30px;
+    }
+    .serv-thi-textBox-item{
+        padding-left : 0px;
+        padding: 20px 0px ;
+    }
+    .serv-subtitle{
+        font-size: 16px;
+    }
+    .whoawe{
+        position: relative;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    .serv-fou-textline-head{
+        display: flex;
+        align-items: center;
+
+    }
+    .serv-fou-textline-title{
+        padding-left: 12px;
+        font-size: 18px;
+    }
+    .serv-section-title{
+        word-break: keep-all;
+    }
+    .serv-fou-textline-text{
+        font-size: 16px;
+        word-break: keep-all;
+    }
+    .service-zomIntBox{
+        padding: 25px 20px;
+        display: block;
+    }
+    .service-zomIntBox-right{
+        padding-left: 0px;
+    }
+    .service-zomIntBox-icon{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        left: 0px;
+        margin-top: 25px;
+    }
+    .service-zomIntBox-right-title{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .service-zomIntBox-text{
+        font-size: 14px;
+        word-break: keep-all;
+    }
+    .service-zomIntBox-button{
+        font-size: 14px;
+        padding: 14px 0px;
+        width: calc(33.3% - 20px);
+    }
+    .real-review-item{
+        position: unset;
+        width: 100%;
+    }
+    .real-review-item-title{
+        width: 100%;
+    }
+    .real-review-underButton{
+        width: 100%;
+        margin-top: 30px;
+        padding: 14px 0px ;
+        font-size: 15px;
+    }
+    #serv-sixth{
+        padding-top: 80px;
+    }
+    .serv-calumItem{
+        display: block;
+    }
+    .serv-calumItem-left-top{
+        font-size: 20px;
+        text-align: left;
+    }
+    .serv-calumItem-left-bottom{
+        font-size: 11px;
+    }
+    .serv-calumItem-left-title{
+        font-size: 15px;
+    }
+    .serv-calumItem-left-text{
+        font-size: 13px;
+    }
+    .serv-calumItem-left-right{
+        width: 100%;
+    }
+    .serv-svnth-textBox{
+        border: none;
+        padding-left: 0px;
+    }
+    .serv-svnth-item{
+        display: block;
+
+    }
+    .serv-svnth-item-left, .serv-svnth-item-right{
+        width: 100% !important;
+    }
+    .serv-svnth-item-left-title{
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .serv-svnth-item-left-label{
+        font-size: 14px;
+    }
+    .serv-svnth-item-right{
+        font-size: 14px;
+    }
+    .serv-svnth-item-right>br{
+        display: none;
+    }
+    .serv-eigth-accBox-title{
+        padding: 20px 35px;
+        font-size: 15px;
+    }
+    .serv-eigth-accBox-title>strong{
+        left: 0px;
+        font-size: 17px;
+    }
+    .openButton{
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+    }
+    .serv-eigth-accBox-body-open{
+        padding: 20px 35px;
+        font-size: 14px;
+    }
 }

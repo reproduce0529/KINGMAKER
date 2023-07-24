@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="./src/style.css">
     <link rel="website icon" href="./src/logo.png">
     <script src="./src/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <header class="header">
+        <div class="left-slide-top">
+                
+            <img src="./src/logo.png" class="left-slide-logoimg" alt="" onclick="location.href='../'">
+            <i class="fa-solid fa-bars" onclick="openSlideMenu(1)"></i>
+            </div>
         <div class="wrap">
             <div class="inner">
                 <div class="header-menu">
                     <a href="./" class="header-menu-logoimgBox">
-                        <img src="./src/logo.png" class="header-menu-logoimg" alt="">
+                        <img src="../src/logo.png" class="header-menu-logoimg" alt="">
                     </a>
 
                     <div class="header-menu-linkList">
@@ -24,9 +31,22 @@
                         <a href="./service/" class="header-menu-link">서비스 소개 <span class="underline"></span></a>
                     </div>
                 </div>
+
+                
             </div>
         </div>
+
+        <div class="left-slide-menu">
+            <div class="slide-inner">
+                
+        
+                    <a href="./whatisthis/" class="left-slide-link">여긴 뭐야? <span class="underline"></span></a>
+                    <a href="./service/" class="left-slide-link">서비스 소개 <span class="underline"></span></a>
+            </div>
+        </div>
+
     </header>
+
 
 
     <section class="section" id="visual-section">
@@ -38,7 +58,7 @@
             <div class="wrap">
                 <div class="inner">
                     <div class="visual-text-content">
-                        <div class="text-boldLine"><strong><img src="./src/logo.png"></strong> &nbsp;가 대체 왜 유명하냐구요?
+                        <div class="text-boldLine"><strong><img src="./src/logo.png"></strong>가 대체 왜 유명하냐구요?
                         </div>
                         <p class="text-normalLine">맡긴 뒤 매출이 오르지 않으면 환불해 드리기 때문입니다.</p>
                     </div>
